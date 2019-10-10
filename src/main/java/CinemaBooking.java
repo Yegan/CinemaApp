@@ -28,7 +28,7 @@ public class CinemaBooking {
         }
     }
     public void show(){
-        System.out.println("----------Screen------------");
+        System.out.println("-Screen-");
         for(int i = 0; i< bookings.length; i++){
             for (int j=0; j<bookings[i].length; j++){
                 System.out.print(bookings[i][j]);

@@ -25,6 +25,8 @@ public class CodeThisTest {
         cinemaBooking.cinemaSeats();
         cinemaBooking.bookSeat(1,1);
         cinemaBooking.bookSeat(1,2);
+        cinemaBooking.bookSeat(0,1);
+
         cinemaBooking.show();
     }
 }
