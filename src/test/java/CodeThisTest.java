@@ -26,7 +26,9 @@ public class CodeThisTest {
         cinemaBooking.bookSeat(1,1);
         cinemaBooking.bookSeat(1,2);
         cinemaBooking.bookSeat(0,1);
-
         cinemaBooking.show();
+
+        assertEquals(false, cinemaBooking.isSeatBooked(1,1));
+
     }
 }
