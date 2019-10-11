@@ -58,13 +58,14 @@ public class CinemaBooking {
                 if(bookings[i][j]=="X"){
                     frontRow = frontRow +25;
                 }
-//                if(bookings[i].length == 1 & bookings[i].length== 2 & bookings[i].length== 3 ){
-//
-//                }
             }
         }
         System.out.println("Total income from seats booked : R"+ frontRow +".00" );
         return frontRow;
+    }
+
+    public boolean book(int ticket, String location){
+        return false;
     }
 
 
