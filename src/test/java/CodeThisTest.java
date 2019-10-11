@@ -29,6 +29,28 @@ public class CodeThisTest {
         cinemaBooking.show();
 
         assertEquals(false, cinemaBooking.isSeatBooked(1,1));
+    }
 
+
+    @Test
+    public void totalSeatsBooked(){
+       CinemaBooking cinemaBooking = new CinemaBooking();
+       cinemaBooking.cinemaSeats();
+       cinemaBooking.bookSeat(1,1);
+       cinemaBooking.bookSeat(1,2);
+       cinemaBooking.bookSeat(0,1);
+        cinemaBooking.show();
+       assertEquals(3, cinemaBooking.totalBookings() );
+
+    }
+    @Test
+    public void totalIncomeTest(){
+        CinemaBooking cinemaBooking = new CinemaBooking();
+        cinemaBooking.cinemaSeats();
+        cinemaBooking.bookSeat(1,1);
+        cinemaBooking.bookSeat(1,2);
+        cinemaBooking.bookSeat(1,3);
+
+        assertEquals(75, cinemaBooking.totalIncome());
     }
 }

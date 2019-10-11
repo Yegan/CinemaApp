@@ -37,5 +37,35 @@ public class CinemaBooking {
         }
     }
 
+    public int totalBookings(){
+       int totalSeatsBooked =0;
+        for(int i =0;i<bookings.length;i++){
+            for (int j =0;j<bookings[i].length;j++){
+                if(bookings[i][j] == "X"){
+                    totalSeatsBooked++;
+                }
+            }
+        }
+        System.out.println("There have been: "+ totalSeatsBooked + " seats booked");
+        return totalSeatsBooked;
+    }
+
+    public int totalIncome(){
+        int frontRow = 0;
+
+        for(int i=0;i<bookings.length;i++){
+            for(int j=0;j<bookings[i].length;j++){
+                if(bookings[i][j]=="X"){
+                    frontRow = frontRow +25;
+                }
+//                if(bookings[i].length == 1 & bookings[i].length== 2 & bookings[i].length== 3 ){
+//
+//                }
+            }
+        }
+        System.out.println("Total income from seats booked : R"+ frontRow +".00" );
+        return frontRow;
+    }
+
 
 }
