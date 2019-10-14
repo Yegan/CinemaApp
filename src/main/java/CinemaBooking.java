@@ -51,20 +51,36 @@ public class CinemaBooking {
     }
 
     public int totalIncome(){
-        int frontRow = 0;
+        int seatRow = 0;
 
         for(int i=0;i<bookings.length;i++){
             for(int j=0;j<bookings[i].length;j++){
-                if(bookings[i][j]=="X"){
-                    frontRow = frontRow +25;
+                if(bookings[i][j]=="X" ){
+                        if(i>= 0 & i<=3){
+                            seatRow = seatRow +25;
+                        }
+                        if(i >= 4 & i <= 6){
+                            seatRow = seatRow +35;
+                        }
+                        if(i >= 7 & i <= 9 ){
+                        seatRow = seatRow +31;
+                        }
                 }
+
             }
+
         }
-        System.out.println("Total income from seats booked : R"+ frontRow +".00" );
-        return frontRow;
+        System.out.println("Total income from seats booked : R"+ seatRow +".00" );
+        return seatRow;
     }
 
     public boolean book(int ticket, String location){
+        for (int i=0;i<bookings.length;i++){
+            for (int j=0;j<bookings[i].length;j++){
+
+            }
+        }
+
         return false;
     }
 

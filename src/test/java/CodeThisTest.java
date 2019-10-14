@@ -43,14 +43,26 @@ public class CodeThisTest {
        assertEquals(3, cinemaBooking.totalBookings() );
 
     }
+
     @Test
     public void totalIncomeTest(){
         CinemaBooking cinemaBooking = new CinemaBooking();
         cinemaBooking.cinemaSeats();
-        cinemaBooking.bookSeat(1,1);
-        cinemaBooking.bookSeat(1,2);
-        cinemaBooking.bookSeat(1,3);
+        cinemaBooking.bookSeat(4,1);
+        cinemaBooking.bookSeat(5,2);
+        cinemaBooking.bookSeat(6,3);
 
-        assertEquals(75, cinemaBooking.totalIncome());
+        assertEquals(105, cinemaBooking.totalIncome());
     }
+    @Test
+    public void totalIncomeTest2(){
+        CinemaBooking cinemaBooking = new CinemaBooking();
+        cinemaBooking.cinemaSeats();
+        cinemaBooking.bookSeat(1,1);
+        cinemaBooking.bookSeat(8,2);
+        cinemaBooking.bookSeat(4,3);
+
+        assertEquals(91, cinemaBooking.totalIncome());
+    }
+
 }
